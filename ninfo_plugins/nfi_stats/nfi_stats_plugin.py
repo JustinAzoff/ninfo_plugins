@@ -1,7 +1,8 @@
 import httplib2
 import simplejson
+from ninfo import PluginBase
             
-class nfi_stats:
+class nfi_stats(PluginBase):
     name = "nfi_stats"
     title = "Netflow Stats"
     description = "Netflow Statistics"
