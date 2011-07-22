@@ -14,6 +14,10 @@
     background: #ffd320;
     color: black;
 }
+.Green {
+    background: #008000;
+    color: white;
+}
 </style>
 <p>
 Check result: <span class="result ${result}">${result}</span>
