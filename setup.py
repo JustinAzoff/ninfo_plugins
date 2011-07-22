@@ -12,7 +12,7 @@ setup(name='ninfo-plugins',
     ],
     entry_points = {
         'ninfo.plugin': [
-            'nfi_stats = ninfo_plugins.nfi_stats_plugin',
+            'nfi_stats = ninfo_plugins.nfi_stats.nfi_stats_plugin',
         ]
     }
 ) 
