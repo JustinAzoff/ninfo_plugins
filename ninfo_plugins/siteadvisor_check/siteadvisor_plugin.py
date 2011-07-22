@@ -3,7 +3,7 @@ from ninfo import PluginBase
             
 class siteadvisor_check(PluginBase):
     name = "siteadvisor"
-    title = "SiteAvisor"
+    title = "SiteAdvisor"
     description = "SiteAdvisor Check"
     long_description = "This plugin checks to see if a site is listed in McAfee SiteAdvisor"
     cache_timeout = 60*60*2
