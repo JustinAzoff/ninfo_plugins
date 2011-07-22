@@ -8,6 +8,7 @@ class siteadvisor_check(PluginBase):
     long_description = "This plugin checks to see if a site is listed in McAfee SiteAdvisor"
     cache_timeout = 60*60*2
     types = ['ip','hostname']
+    local = False
 
     base_url = "http://www.siteadvisor.com/sites/"
 
