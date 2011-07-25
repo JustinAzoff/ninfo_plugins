@@ -21,6 +21,7 @@ setup(name='ninfo-plugins',
             'cif            = ninfo_plugins.cif.cif_plugin',
             'pinginventory  = ninfo_plugins.pinginventory.pinginventory_plugin',
             'netdisco       = ninfo_plugins.netdisco.netdisco_plugin',
+            'google_safebrowsing = ninfo_plugins.google_safebrowsing.google_safebrowsing_plugin',
         ]
     }
 ) 
