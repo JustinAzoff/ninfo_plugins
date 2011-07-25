@@ -23,7 +23,11 @@ class cif_plug(PluginBase):
         self.c.GET(arg)
         info = json.loads(self.c.responseContent)
         if info['status'] != 200:
-            return dict(status="error", code=info['status'], message = info['message'])
+            return { 'records': [],
+                     'status': "error",
+                     'code': info['status'],
+                     'message' :info['message']
+                   }
 
         if 'result' not in info['data']:
             records = []
