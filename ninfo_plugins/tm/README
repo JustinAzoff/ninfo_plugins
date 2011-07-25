@@ -1,0 +1,6 @@
+Requires a server running time-machine and my time-machine-server REST api
+
+Configuration:
+
+[plugin:tm]
+server = host:8000
