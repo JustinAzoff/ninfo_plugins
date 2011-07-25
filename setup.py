@@ -15,6 +15,7 @@ setup(name='ninfo-plugins',
             'nfi_stats = ninfo_plugins.nfi_stats.nfi_stats_plugin',
             'siteadvisor = ninfo_plugins.siteadvisor_check.siteadvisor_plugin',
             'passivedns = ninfo_plugins.passivedns.passivedns_plugin',
+            'ipblocker = ninfo_plugins.ipblocker.ipblocker_plugin',
         ]
     }
 ) 
