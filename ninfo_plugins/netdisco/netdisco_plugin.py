@@ -25,6 +25,7 @@ class netdiscoinfo(PluginBase):
     The speed of the port
     The description of the port'''
     types    =       ['ip','mac']
+    remote = False
 
     def setup(self):
         from netdisco import db
