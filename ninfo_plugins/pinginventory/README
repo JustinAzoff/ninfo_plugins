@@ -1,0 +1,6 @@
+Requires https://github.com/JustinAzoff/pinginventory
+
+Configuration:
+
+[plugin:pinginventory]
+config_file = /path/to/pinginventory.ini

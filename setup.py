@@ -18,6 +18,8 @@ setup(name='ninfo-plugins',
             'ipblocker      = ninfo_plugins.ipblocker.ipblocker_plugin',
             'tm             = ninfo_plugins.tm.tm_plugin',
             'snort          = ninfo_plugins.snort.snort_plugin',
+            'cif            = ninfo_plugins.cif.cif_plugin',
+            'pinginventory  = ninfo_plugins.pinginventory.pinginventory_plugin',
         ]
     }
 ) 
