@@ -20,6 +20,7 @@ setup(name='ninfo-plugins',
             'snort          = ninfo_plugins.snort.snort_plugin',
             'cif            = ninfo_plugins.cif.cif_plugin',
             'pinginventory  = ninfo_plugins.pinginventory.pinginventory_plugin',
+            'netdisco       = ninfo_plugins.netdisco.netdisco_plugin',
         ]
     }
 ) 
