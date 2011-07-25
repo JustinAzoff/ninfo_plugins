@@ -18,16 +18,19 @@ class siteadvisor_check(PluginBase):
         ('<div id="siteVerdict"  class="siteRed">',     'Red'),
     )
 
+    def determine_color(self, content):
+        for phrase, color in self.phrases:
+            if phrase in content:
+                return color
+        
+        return "Unknown"
+
     def get_info(self, hostname):
         h = httplib2.Http()
         url = self.base_url + hostname
         resp, content = h.request(url)
 
-        result = "unknown"
-        for phrase, color in self.phrases:
-            if phrase in content:
-                result = color
-                break
+        color = self.determine_color(content)
 
         return {"result": color}
 
