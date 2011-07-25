@@ -21,4 +21,11 @@ class pinginventory(PluginBase):
             return None
         return {'hist': hist}
 
+    def to_json(self, result):
+        h = []
+        for date, res in result['hist']:
+            h.append((str(date), res))
+        result['hist'] = h
+        return result
+
 plugin_class = pinginventory

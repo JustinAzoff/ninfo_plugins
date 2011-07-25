@@ -21,4 +21,14 @@ class snortinfo(PluginBase):
         data = [dict(r) for r in self.sdb.get_events_for_ip(ip)]
         return { 'idsdata': data }
 
+    def to_json(self, result):
+        d = []
+        for x in result['idsdata']:
+            x = x.copy()
+            x['last'] = str(x['last'])
+            x['first'] = str(x['first'])
+            d.append(x)
+        result['idsdata'] = d
+        return result
+
 plugin_class = snortinfo
