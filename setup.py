@@ -17,6 +17,7 @@ setup(name='ninfo-plugins',
             'passivedns     = ninfo_plugins.passivedns.passivedns_plugin',
             'ipblocker      = ninfo_plugins.ipblocker.ipblocker_plugin',
             'tm             = ninfo_plugins.tm.tm_plugin',
+            'snort          = ninfo_plugins.snort.snort_plugin',
         ]
     }
 ) 
