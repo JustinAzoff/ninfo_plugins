@@ -11,7 +11,6 @@ class tm(PluginBase):
 
     def setup(self):
         self.c=timemachine.Client(self.plugin_config['server'])
-        return True
 
     def get_info(self, ip):
         data = self.c.list_pcaps_for_ip(ip)

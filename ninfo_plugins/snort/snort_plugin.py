@@ -13,7 +13,6 @@ class snortinfo(PluginBase):
         from snort import snortdb
         self.sdb = snortdb.sdb()
         self.sdb.setlimit(100000)
-        return True
 
     def get_info(self, ip):
         time_ago = datetime.date.today() - datetime.timedelta(days=14)

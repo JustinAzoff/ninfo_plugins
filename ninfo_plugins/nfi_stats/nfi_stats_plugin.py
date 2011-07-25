@@ -15,7 +15,6 @@ class nfi_stats(PluginBase):
             return False
         self.base_url = self.plugin_config['base_url']
         self.url = self.base_url + "stats?ip="
-        return True
 
     def get_info(self, ip):
         h = httplib2.Http()

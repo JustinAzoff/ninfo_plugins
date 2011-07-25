@@ -10,7 +10,6 @@ class ipb(PluginBase):
     def setup(self):
         import ipblocker
         self.ipblocker = ipblocker
-        return True
 
     def get_info(self, ip):
         records = self.ipblocker.model.get_ip(ip)
