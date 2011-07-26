@@ -4,7 +4,7 @@
         fields = plugin_config['fields'].split()
 %>
 
-<table>
+<table border="1" cellpadding="1" cellspacing="0">
 %for f in [x for x in fields if x in record]:
 <tr>
     <td> ${f} </td>
