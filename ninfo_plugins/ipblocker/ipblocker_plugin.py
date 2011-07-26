@@ -1,9 +1,10 @@
 from ninfo import PluginBase
 class ipb(PluginBase):
+    """This plugin returns the ipblocker history for this ip"""
+
     name    =   'ipblocker'
     title   =   'IP Blocker'
     description = 'IP Blocker records'
-    long_description = 'This plugin returns the ipblocker history for this ip'
     cache_timeout =  60*1
     types   = ['ip']
 

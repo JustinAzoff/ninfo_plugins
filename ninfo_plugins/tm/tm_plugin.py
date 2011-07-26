@@ -2,10 +2,11 @@ from ninfo import PluginBase
 import timemachine
 
 class tm(PluginBase):
+    """This plugin returns any time machine files for a particular ip"""
+
     name        =  'tm'
     title       =  'Time Machine'
     description =  'Time Machine captures'
-    long_description = 'This plugin returns any time machine files for a particular ip'
     cache_timeout   =  60*2
     types   =    ['ip']
 

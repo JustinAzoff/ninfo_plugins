@@ -3,10 +3,11 @@ import httplib2
 from ninfo import PluginBase
 
 class SafeBrowsing(PluginBase):
+    """This plugin looks up the address using the google safe browsing API"""
+
     name =         'google_safebrowsing'
     title =        'Google Safe Browsing'
     description =  'Google Safe Browsing check'
-    long_description =  'This plugin looks up the address using the google safe browsing API'
     cache_timeout =   60*60
     types =     ['ip','hostname']
     local =     False

@@ -1,11 +1,11 @@
 from ninfo import PluginBase
 
 class pinginventory(PluginBase):
+    """This plugin returns the ping inventory history for this ip"""
 
     name    =   'pinginventory'
     title   =   'Ping Inventory'
     description   =  'Ping Inventory log'
-    longdescription   = 'This plugin returns the ping inventory history for this ip'
     cachetimeout   =  60*5
     types   =    ['ip']
     remote = False

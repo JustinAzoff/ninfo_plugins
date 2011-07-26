@@ -2,10 +2,11 @@ from ninfo import PluginBase
 import datetime
 
 class snortinfo(PluginBase):
+    """This plugin returns any information found in the snort(IDS) database in the last 14 days"""
+
     name    =      'snort'
     title   =      'Snort IDS'
     description =  'IDS information'
-    long_description = 'This plugin returns any information found in the snort(IDS) database in the last 14 days'
     cache_timeout =  60*5
     types=    ['ip']
 

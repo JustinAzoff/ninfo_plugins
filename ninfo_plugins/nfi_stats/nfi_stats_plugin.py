@@ -3,10 +3,11 @@ import simplejson
 from ninfo import PluginBase
             
 class nfi_stats(PluginBase):
+    """This plugin checks to see if the ip was seen at all in the netflow index"""
+
     name = "nfi_stats"
     title = "Netflow Stats"
     description = "Netflow Statistics"
-    long_description = "This plugin checks to see if the ip was seen at all in the netflow index"
     cache_timeout = 60*30
     types = ['ip']
 

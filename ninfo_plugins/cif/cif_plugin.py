@@ -5,10 +5,10 @@ except ImportError:
     import simplejson as json
 
 class cif_plug(PluginBase):
+    """This plugin returns any information from a CIF server"""
     name    =    'cif'
     title   =    'CIF'
     description   =  'Collective Intelligence Framework'
-    long_description   = 'This plugin returns any information from a CIF server'
     cache_timeout   =  60*10
     types   =    ['ip','hostname']
     local = False

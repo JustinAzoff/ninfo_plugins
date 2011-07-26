@@ -3,27 +3,28 @@ import ieeemac
 
 
 class netdiscoinfo(PluginBase):
+    """This plugin looks up the given IP in netdisco
+    The data returned consists of:
+        The mac addresses for this IP(macs)
+        The IP of the switch that this IP is on(switch)
+        The port that this IP is on(port)
+        The status of this port
+        The name of the switch that this IP is on(switchname)
+        The type of device
+        The location of this switch
+        The netbios name of this computer
+        The logged in user on this computer
+        The domain of this computer
+        If the port this computer on has ever been disabled
+        The duplex status of the port
+        The configured duplex of the port
+        The speed of the port
+        The description of the port"""
+
     name    =           'netdisco'
     title   =           'Netdisco'
     description    =    'Information from Netdisco'
     cache_timeout  =    60*5
-    long_description    =    '''This plugin looks up the given IP in netdisco
-    The data returned consists of    =   
-    The mac addresses for this IP(macs)
-    The IP of the switch that this IP is on(switch)
-    The port that this IP is on(port)
-    The status of this port
-    The name of the switch that this IP is on(switchname)
-    The type of device
-    The location of this switch
-    The netbios name of this computer
-    The logged in user on this computer
-    The domain of this computer
-    If the port this computer on has ever been disabled
-    The duplex status of the port
-    The configured duplex of the port
-    The speed of the port
-    The description of the port'''
     types    =       ['ip','mac']
     remote = False
 
