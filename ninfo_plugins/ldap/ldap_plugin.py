@@ -29,6 +29,8 @@ class ldap_plugin(PluginBase):
     def get_info(self, arg):
         search = "uid=%s" % arg
         res = self.l.search_s(self.dsn, self.ldap.SCOPE_SUBTREE, search)
+        if not res:
+            return None
         res = res[0]
         key, values = res
 
@@ -36,6 +38,6 @@ class ldap_plugin(PluginBase):
         for k,v in values.items():
             ret[k] = ', '.join(v)
 
-        return ret
+        return {'record': ret}
 
 plugin_class = ldap_plugin
