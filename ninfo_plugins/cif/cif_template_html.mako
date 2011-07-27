@@ -1,6 +1,6 @@
 %if records:
 <table border="1" cellpadding="1" cellspacing="0">
-<tr><th>Address</th><th>description</th><th>detecttime</th></tr>
+<tr><th>Address</th><th>Detect Time</th> <th>Description</th></tr>
 %for i in [r['Incident'] for r in records]:
 <tr>
     <td> ${i['EventData']['Flow']['System']['Node']['Address']} </td>
