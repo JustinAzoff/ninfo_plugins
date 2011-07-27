@@ -20,19 +20,13 @@ class cif_plug(PluginBase):
         self.c=cif.Client(server, api_key)
 
     def get_info(self, arg):
-        self.c.GET(arg)
-        info = json.loads(self.c.responseContent)
-        if info['status'] != 200:
-            return { 'records': [],
-                     'status': "error",
-                     'code': info['status'],
-                     'message' :info['message']
-                   }
+        info = self.c.GET(arg)
 
-        if 'result' not in info['data']:
+        if 'entry' not in info['feed']:
             records = []
         else:
-            records = info['data']['result']['feed']['items']
+            records = info['feed']['entry']
+
         return {'records': records}
 
 
