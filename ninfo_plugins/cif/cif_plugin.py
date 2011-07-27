@@ -21,13 +21,10 @@ class cif_plug(PluginBase):
 
     def get_info(self, arg):
         info = self.c.GET(arg)
+        entries = info['feed']['entry']
+        simple_info = [self.c.simple(i['Incident']) for i in entries]
 
-        if 'entry' not in info['feed']:
-            records = []
-        else:
-            records = info['feed']['entry']
-
-        return {'records': records}
+        return {'records': simple_info}
 
 
 plugin_class = cif_plug

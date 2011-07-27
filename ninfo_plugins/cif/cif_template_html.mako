@@ -1,19 +1,21 @@
 %if records:
 <table border="1" cellpadding="1" cellspacing="0">
-<tr><th>Address</th><th>Detect Time</th> <th>Description</th></tr>
-%for i in [r['Incident'] for r in records]:
+<tr><th>Address</th><th>Detect Time</th> <th>Description</th> <th>Impact</th> <th>Severity</th></tr>
+%for i in records:
 <tr>
-    <td> ${i['EventData']['Flow']['System']['Node']['Address']} </td>
-    <td> ${i['DetectTime']} </td>
+    <td> ${i['address']}
+    <td> ${i['detecttime']} </td>
     <td>
-%if 'AlternativeID' in i:
-        <a href="${i['AlternativeID']['IncidentID']['content']}">
-            ${i['Description']}
+%if 'alternativeid' in i:
+        <a href="${i['alternativeid']}">
+            ${i['description']}
         </a>
 %else:
-        ${i['Description']}
+        ${i['description']}
 %endif
     </td>
+    <td> ${i['impact']} </td>
+    <td> ${i['severity']} </td>
 </tr>
 %endfor
 </table>

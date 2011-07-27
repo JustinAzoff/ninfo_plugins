@@ -1,3 +1,3 @@
-%for i in [r['Incident'] for r in records]:
-${i['EventData']['Flow']['System']['Node']['Address']} ${i['DetectTime']} ${i['Description']}
+%for i in records:
+${i['address']} ${i['detecttime']} ${i['description']} ${i['impact']} ${i['severity']}
 %endfor
