@@ -21,7 +21,11 @@ class cif_plug(PluginBase):
 
     def get_info(self, arg):
         info = self.c.GET(arg)
-        entries = info['feed']['entry']
+        try:
+            entries = info['feed']['entry']
+        except (KeyError, TypeError):
+            entries = []
+
         simple_info = [self.c.simple(i['Incident']) for i in entries]
 
         return {'records': simple_info}
