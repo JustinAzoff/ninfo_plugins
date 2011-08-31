@@ -12,5 +12,5 @@ unblocked on ${x.unblocked.strftime("%Y-%m-%d")}
 %endfor
 </ul>
 
-<a href="${plugin_config['web_url']}${arg}">Full IPBlocker info</a>
+<a href="${plugin_config['web_url'] | n }${arg}">Full IPBlocker info</a>
 %endif
