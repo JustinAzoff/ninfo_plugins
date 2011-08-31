@@ -75,8 +75,9 @@ class netdiscoinfo(PluginBase):
             ret["description"] = porto.name
             ret['hasbeendisabled'] = bool(list(porto.log))
 
-        data = self.db.Node_NBT.query.filter(self.db.Node_NBT.ip==ip).first()
-        ret['netbios'] = False
+        ret['netbios'] = data = False
+        if ip:
+            data = self.db.Node_NBT.query.filter(self.db.Node_NBT.ip==ip).first()
         if data:
             ret['netbios'] = True
             ret['nbname'] = data.nbname
