@@ -1,5 +1,5 @@
 %if macs:
-MAC addresses:     ${macs}
+MAC addresses:     ${', '.join(macs)}
 %endif
 %if found:
 Switch:            ${switch}
