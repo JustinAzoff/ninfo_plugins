@@ -6,7 +6,7 @@ setup(name='ninfo-plugins',
     packages = find_packages(exclude=["tests"]),
     include_package_data=True,
     install_requires=[
-        "ninfo>=0.1.0",
+        "ninfo>=0.1.5",
     ],
     entry_points = {
         'ninfo.plugin': [
