@@ -1,4 +1,4 @@
-import httplib2
+import requests
 import simplejson
 from ninfo import PluginBase
             
@@ -18,10 +18,9 @@ class nfi_stats(PluginBase):
         self.url = self.base_url + "stats?ip="
 
     def get_info(self, ip):
-        h = httplib2.Http()
         url = self.url + ip
-        resp, content = h.request(url)
-        stats = simplejson.loads(content)
+        resp = requests.get(url, verify=False)
+        stats = simplejson.loads(resp.raw.read())
         return stats
 
 plugin_class = nfi_stats
