@@ -14,7 +14,7 @@ class passivedns(PluginBase):
         self.c=client.SearchClient()
 
     def get_info(self, arg):
-        info = self.c.search_answer(arg) + self.c.search_question(arg)
+        info = self.c.search(arg)
         return {'records':info}
 
 plugin_class = passivedns
