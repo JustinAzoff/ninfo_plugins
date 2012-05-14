@@ -8,7 +8,7 @@ class passivedns(PluginBase):
     description = "Passive DNS"
     cache_timeout = 60*10
     #partial ipv6 addresses currently get typed as usernames, needs to be fixed
-    types = ['ip', 'hostname','username']
+    types = ['ip', 'ip6', 'hostname','username']
 
     def setup(self):
         from passive_dns import client

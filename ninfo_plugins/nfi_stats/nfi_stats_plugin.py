@@ -9,7 +9,7 @@ class nfi_stats(PluginBase):
     title = "Netflow Stats"
     description = "Netflow Statistics"
     cache_timeout = 60*30
-    types = ['ip']
+    types = ['ip','ip6']
 
     def setup(self):
         if not self.plugin_config:

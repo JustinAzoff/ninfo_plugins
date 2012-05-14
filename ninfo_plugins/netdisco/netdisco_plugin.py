@@ -25,7 +25,7 @@ class netdiscoinfo(PluginBase):
     title   =           'Netdisco'
     description    =    'Information from Netdisco'
     cache_timeout  =    60*5
-    types    =       ['ip','mac']
+    types    =       ['ip','ip6','mac']
     remote = False
 
     def setup(self):

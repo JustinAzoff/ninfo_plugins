@@ -8,7 +8,7 @@ class siteadvisor_check(PluginBase):
     title = "SiteAdvisor"
     description = "SiteAdvisor Check"
     cache_timeout = 60*60*2
-    types = ['ip','hostname']
+    types = ['ip','ip6','hostname']
     local = False
 
     base_url = "http://www.siteadvisor.com/sites/"

@@ -7,7 +7,7 @@ class pinginventory(PluginBase):
     title   =   'Ping Inventory'
     description   =  'Ping Inventory log'
     cachetimeout   =  60*5
-    types   =    ['ip']
+    types   =    ['ip','ip6']
     remote = False
 
     def setup(self):

@@ -9,7 +9,7 @@ class SafeBrowsing(PluginBase):
     title =        'Google Safe Browsing'
     description =  'Google Safe Browsing check'
     cache_timeout =   60*60
-    types =     ['ip','hostname']
+    types =     ['ip','ip6','hostname']
     local =     False
 
     def setup(self):

@@ -6,7 +6,7 @@ class ipb(PluginBase):
     title   =   'IP Blocker'
     description = 'IP Blocker records'
     cache_timeout =  60*1
-    types   = ['ip']
+    types   = ['ip','ip6']
 
     def setup(self):
         import ipblocker

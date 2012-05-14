@@ -7,7 +7,7 @@ class tm(PluginBase):
     title       =  'Time Machine'
     description =  'Time Machine captures'
     cache_timeout   =  60*2
-    types   =    ['ip']
+    types   =    ['ip','ip6']
 
     def setup(self):
         import timemachine
