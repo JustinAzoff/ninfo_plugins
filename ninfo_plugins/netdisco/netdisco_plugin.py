@@ -88,6 +88,19 @@ class netdiscoinfo(PluginBase):
 
         return ret
 
+    def get_macs_for_ip(self, ip):
+        macs = self.db.util.get_macs_for_ip(ip)
+        return macs
+    def get_ips_for_mac(self, mac):
+        ips = self.db.util.get_ips_for_mac(mac)
+        return ips
+
+    converters = {
+        ('ip6', 'mac'): "get_macs_for_ip",
+        ('ip',  'mac'): "get_macs_for_ip",
+        ('mac', 'ip'):  "get_ips_for_mac",
+        ('mac', 'ip6'): "get_ips_for_mac",
+    }
 
 plugin_class = netdiscoinfo
 
