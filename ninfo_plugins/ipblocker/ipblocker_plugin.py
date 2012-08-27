@@ -13,7 +13,7 @@ class ipb(PluginBase):
         self.ipblocker = ipblocker
 
     def get_info(self, ip):
-        records = self.ipblocker.model.get_ip(ip)
+        records = self.ipblocker.model.search_ip(ip)
         return {'records': records}
 
 plugin_class = ipb
