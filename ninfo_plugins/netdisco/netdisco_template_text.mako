@@ -1,5 +1,6 @@
 %if macs:
 MAC addresses:     ${', '.join(macs)}
+Company:           ${company}
 %endif
 %if found:
 Switch:            ${switch}

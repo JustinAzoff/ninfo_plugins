@@ -34,16 +34,26 @@ class netdiscoinfo(PluginBase):
 
     def get_info(self, arg):
         ret = {}
+        company = ""
         if ieeemac.ismac(arg):
             mac = arg
             ret['ips'] = ips = self.db.util.get_ips_for_mac(mac)
             ip = ips and ips[0]
             ret["macs"] = [mac]
             porto = self.db.Port.get_by_mac(mac)
+            nodes = self.db.Node.query.filter_by(mac=arg).all()
+            if nodes:
+                company = nodes[0].company
         else :
             ip = arg
             ret["macs"] = self.db.util.get_macs_for_ip(ip)
             porto = self.db.Port.get_by_ip(ip)
+            nodes = self.db.Node_IP.query.filter_by(ip=arg).all()
+            if nodes:
+                company = nodes[0].company
+
+        ret['company'] = company
+                
         
         if porto:
             ret['found'] = True
