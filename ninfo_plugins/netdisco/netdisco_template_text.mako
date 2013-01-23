@@ -1,3 +1,6 @@
+%if ips:
+IP  addresses:     ${', '.join(ips)}
+%endif
 %if macs:
 MAC addresses:     ${', '.join(macs)}
 Company:           ${company}
