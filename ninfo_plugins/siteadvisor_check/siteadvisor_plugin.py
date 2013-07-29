@@ -1,4 +1,4 @@
-import httplib2
+import requests
 from ninfo import PluginBase
             
 class siteadvisor_check(PluginBase):
@@ -27,10 +27,9 @@ class siteadvisor_check(PluginBase):
         return "Unknown"
 
     def get_info(self, hostname):
-        h = httplib2.Http()
         url = self.base_url + hostname
-        resp, content = h.request(url)
-
+        resp = requests.get(url)
+        content = resp.text
         color = self.determine_color(content)
 
         return {"result": color}

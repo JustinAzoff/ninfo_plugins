@@ -1,5 +1,5 @@
 import urllib
-import httplib2
+import requests
 from ninfo import PluginBase
 
 class SafeBrowsing(PluginBase):
@@ -17,14 +17,13 @@ class SafeBrowsing(PluginBase):
         self.base_url = "https://sb-ssl.google.com/safebrowsing/api/lookup?client=ninfo&apikey=%s&appver=1.5.2&pver=3.0" % api_key
 
     def get_info(self, arg):
-        h = httplib2.Http()
         url = self.base_url + "&url=" + urllib.quote(arg)
-        resp, content = h.request(url)
+        resp = requests.get(url)
 
-        if resp.status == 204:
+        if resp.status_code == 204:
             return {}
 
-        status = content
+        status = resp.text
 
         return { 'status': status}
 
