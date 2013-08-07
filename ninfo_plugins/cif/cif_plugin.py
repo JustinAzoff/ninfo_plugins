@@ -17,7 +17,7 @@ class cif_plug(PluginBase):
         import cif
         server  = self.plugin_config['server']
         api_key = self.plugin_config['api_key']
-        self.c=cif.Client(server, api_key)
+        self.c=cif.Client(server, api_key, no_verify_tls=True)
 
     def get_info(self, arg):
         info = self.c.GET(arg)
