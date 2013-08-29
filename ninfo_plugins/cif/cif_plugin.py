@@ -26,7 +26,7 @@ class cif_plug(PluginBase):
         except (KeyError, TypeError):
             entries = []
 
-        simple_info = [self.c.simple(i['Incident']) for i in entries]
+        simple_info = [self.c.make_simple(i['Incident']) for i in entries]
 
         return {'records': simple_info}
 
