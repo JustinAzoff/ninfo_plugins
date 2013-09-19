@@ -6,4 +6,4 @@
 </dl>
 %endfor
 
-<a href="https://portal.datacomm.albany.edu/ids/events?minutes=10080&ip=${arg}">Full IDS info</a>
+<a href="${plugin_config['web_url'] | n }${arg}">Full IDS info</a>
