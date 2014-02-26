@@ -1,6 +1,0 @@
-Requires a server running https://github.com/JustinAzoff/netflow-indexer-web
-
-Configuration:
-
-[plugin:nfi_stats]
-base_url = https://netflow.example.com/nfs/
